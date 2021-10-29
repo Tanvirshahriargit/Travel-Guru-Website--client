@@ -13,6 +13,7 @@ import AddService from './component/LogIn/AddService/AddService';
 import ManageAllOrders from './component/LogIn/ManageAllOrders/ManageAllOrders';
 import Footer from './component/Shared/Footer/Footer';
 import Headers from './component/Shared/Headers/Headers';
+import BookingInformation from './component/Home/BookingInformation/BookingInformation';
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
           <Route path ="/home">
           <Home></Home>
           </Route>
-          <Route path ="/booking">
-          <BookingServices></BookingServices>
+          <Route path ="/booking/:id">
+          <BookingInformation></BookingInformation>
           </Route>
           <Route path ="/about">
           <About></About>
