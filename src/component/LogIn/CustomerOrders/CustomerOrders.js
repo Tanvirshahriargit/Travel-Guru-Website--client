@@ -37,7 +37,8 @@ const CustomerOrders = () => {
     // console.log(orders);
     return (
         <div>
-            <h1>My Orders : {orders.length}</h1>
+            <h2 className="text-primary">My Orders : {orders.length}</h2>
+            <hr className="mx-auto w-25 border border-1 border-primary" />
             <div className="row">
                 {
                     orders.map(order => <div className="col-12 col-md-6">
