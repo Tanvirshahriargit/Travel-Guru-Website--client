@@ -41,16 +41,16 @@ const ManageAllOrders = () => {
                         <Card>
                             <Card.Img variant="top" src={mangeorder.img} />
                             <Card.Body>
-                                <Card.Title>Name: {mangeorder.userName}</Card.Title>
+                                <Card.Title><i class="fas fa-user-circle me-2"></i>Name: {mangeorder.userName}</Card.Title>
                                 <Card.Text>
-                                    <p>Email: {mangeorder.email }</p>
+                                    <p><i class="fas fa-envelope-open-text me-2"></i>Email: {mangeorder.email }</p>
                                 </Card.Text>
                                 <Card.Text>
-                                    <p>Address: {mangeorder.address }</p>
+                                    <p><i class="fas fa-location-arrow me-2"></i>Address: {mangeorder.address }</p>
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                            <button onClick={() => handleDelete(mangeorder._id)} className='btn btn-danger'>Detete Customer Order</button>
+                            <button onClick={() => handleDelete(mangeorder._id)} className='btn btn-danger'><i class="fas fa-trash-alt me-2"></i>Detete Customer Order</button>
                             </Card.Footer>
                         </Card>
                     </div>)

@@ -49,10 +49,10 @@ const CustomerOrders = () => {
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card-body">
-                                        <h5 class="card-title">Name: {order.userName}</h5>
-                                        <p class="card-text">Eamil: {order.email}</p>
-                                        <p class="card-text">Number:{order.phoneNumber}</p>
-                                        <button onClick={() => handleDelete(order._id)} className='btn btn-danger'>Detete Order</button>
+                                        <h5 class="card-title"><i class="fas fa-user-circle me-2"></i>Name: {order.userName}</h5>
+                                        <p class="card-text"><i class="fas fa-envelope-open-text me-2"></i>Eamil: {order.email}</p>
+                                        <p class="card-text"><i class="fas fa-mobile me-2"></i>Number:{order.phoneNumber}</p>
+                                        <button onClick={() => handleDelete(order._id)} className='btn btn-danger'><i class="fas fa-trash-alt me-2"></i>Detete Order</button>
                                     </div>
                                 </div>
                             </div>
