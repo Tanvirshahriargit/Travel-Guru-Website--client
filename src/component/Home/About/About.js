@@ -69,7 +69,7 @@ const About = () => {
             
             {/* Testumunial */}
             <div>
-                <img className="img-fluid" src={Testomunial} alt="" />
+                <img className="img-fluid mb-3" src={Testomunial} alt="" />
             </div>
         </div>
     );
