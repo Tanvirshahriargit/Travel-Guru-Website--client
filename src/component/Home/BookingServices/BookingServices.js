@@ -15,7 +15,7 @@ const BookingServices = () => {
     }, [])
     return (
         <div>
-            <h1>Most Popular Packages</h1>
+            <h1 className="text-primary mt-3"><i class="fas fa-cubes me-2 text-dark"></i>Most Popular Packages</h1>
             
             <Row xs={1} md={3} className="gx-0 gy-4 p-4">
             {
@@ -29,7 +29,7 @@ const BookingServices = () => {
                                     {service.des}
                                 </Card.Text>
                             </Card.Body>
-                            <Link to={`/booking/${service._id}`}><Button>Plan a Trip</Button></Link>
+                            <Link to={`/booking/${service._id}`}><Button className="mb-4">Plan a Trip<i class="fas fa-cart-arrow-down"></i></Button></Link>
                         </Card>
                     </Col>
                 )
