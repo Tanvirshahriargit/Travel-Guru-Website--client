@@ -40,7 +40,7 @@ const ContactUs = () => {
                 <div className="col-12 col-md-6 col-lg-6">
                     <form className="contact-form">
                         <div className="input-form">
-                            <input className="mb-3 p-2 w-50 border border-info rounded-3" type="text" id="input-name" placeholder="Name" />
+                            <input className="my-3 p-2 w-50 border border-info rounded-3" type="text" id="input-name" placeholder="Name" />
                             <br />
                             <input className="mb-3 p-2 w-50 border border-info rounded-3" type="email" id="input-email" placeholder="Email address" />
                             <br />

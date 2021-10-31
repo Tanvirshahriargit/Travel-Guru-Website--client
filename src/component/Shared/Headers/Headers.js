@@ -31,7 +31,7 @@ const Headers = () => {
                             
                             {
                                 user?.email ?
-                                    <Button className="btn rounded-pill m-3 ms-0" onClick={logOut}>Logout <i class="fas fa-sign-out-alt"></i></Button> :
+                                    <Button className="btn rounded-pill m-3 ms-0" onClick={logOut}>Logout <i className="fas fa-sign-out-alt"></i></Button> :
 
                             <NavLink className="link m-3 ms-0" to="/login">Log In</NavLink>
                             }

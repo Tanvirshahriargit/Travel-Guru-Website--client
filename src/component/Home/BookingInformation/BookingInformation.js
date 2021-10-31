@@ -17,8 +17,12 @@ const BookingInformation = () => {
                 setCustomer(data)
             })
     }, [])
+
     const onSubmit = data => {
         data.email = user?.email;
+        data.location = customer?.location;
+        data.price = customer?.price;
+        data.img = customer?.img;
         console.log(data)
         fetch("https://haunted-eyeballs-76205.herokuapp.com/customers", {
             method: "POST",
@@ -47,10 +51,10 @@ const BookingInformation = () => {
                         <h1> {customer.name}</h1>
                     </Card.Text>
                     <Card.Text>
-                        <h4><i class="fas fa-map-marked-alt text-success me-2"></i>{customer.location}</h4>
+                        <h4><i className="fas fa-map-marked-alt text-success me-2"></i>{customer.location}</h4>
                     </Card.Text>
                     <Card.Text>
-                    <p>Price <i class="fas fa-dollar-sign text-primary"></i>{customer.price}</p>
+                        <p>Price <i className="fas fa-dollar-sign text-primary"></i>{customer.price}</p>
                     </Card.Text>
                     <Card.Text>
                         <p>{customer.des}</p>
@@ -68,7 +72,7 @@ const BookingInformation = () => {
                 <br />
                 <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide Your Location you to go" value={customer.location}  {...register("location")} />
                 <br />
-                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide an image url"  {...register("img")} />
+                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide an image url" value={ customer.img} {...register("img")} />
                 <br />
                 <input className=" mb-3 p-2 w-25 border border-info rounded-3" placeholder="Max Price" value={customer.price} {...register("price")} />
                 <br />

@@ -15,30 +15,30 @@ const BookingServices = () => {
     }, [])
     return (
         <div>
-            <h1 className="text-primary mt-3"><i class="fas fa-cubes me-2 text-dark"></i>Most Popular Packages</h1>
+            <h1 className="text-primary mt-3"><i className="fas fa-cubes me-2 text-dark"></i>Most Popular Packages</h1>
             
             <Row xs={1} md={3} className="gx-0 gy-4 p-4">
             {
                 services.map(service =>
-                    <Col className="p-3">
+                    <Col key={service._id} className="p-3">
                         <Card>
                             <Card.Img variant="top" src={service.img} />
                             <Card.Body>
                                 <Card.Title>{service.name}</Card.Title>
                                 <Card.Text>
-                                    <p><i class="fas fa-map-marked-alt text-success"></i> {service.location}</p>
+                                    <p><i className="fas fa-map-marked-alt text-success"></i> {service.location}</p>
                                 </Card.Text>
                                 <Card.Text>
-                                    <p><i class="fa fa-star text-warning me-2" aria-hidden="true"></i>4.5</p>
+                                    <p><i className="fa fa-star text-warning me-2" aria-hidden="true"></i>4.5</p>
                                 </Card.Text>
                                 <Card.Text>
-                                    <p>Price <i class="fas fa-dollar-sign text-primary"></i>{service.price}</p>
+                                    <p>Price <i className="fas fa-dollar-sign text-primary"></i>{service.price}</p>
                                 </Card.Text>
                                 <Card.Text>
                                     {service.des}
                                 </Card.Text>
                             </Card.Body>
-                            <Link to={`/booking/${service._id}`}><Button className="mb-4">Plan a Trip<i class="fas fa-cart-arrow-down ms-1"></i></Button></Link>
+                            <Link to={`/booking/${service._id}`}><Button className="mb-4">Plan a Trip<i className="fas fa-cart-arrow-down ms-1"></i></Button></Link>
                         </Card>
                     </Col>
                 )
