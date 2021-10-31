@@ -26,10 +26,19 @@ const BookingServices = () => {
                             <Card.Body>
                                 <Card.Title>{service.name}</Card.Title>
                                 <Card.Text>
+                                    <p><i class="fas fa-map-marked-alt text-success"></i> {service.location}</p>
+                                </Card.Text>
+                                <Card.Text>
+                                    <p><i class="fa fa-star text-warning me-2" aria-hidden="true"></i>4.5</p>
+                                </Card.Text>
+                                <Card.Text>
+                                    <p>Price <i class="fas fa-dollar-sign text-primary"></i>{service.price}</p>
+                                </Card.Text>
+                                <Card.Text>
                                     {service.des}
                                 </Card.Text>
                             </Card.Body>
-                            <Link to={`/booking/${service._id}`}><Button className="mb-4">Plan a Trip<i class="fas fa-cart-arrow-down"></i></Button></Link>
+                            <Link to={`/booking/${service._id}`}><Button className="mb-4">Plan a Trip<i class="fas fa-cart-arrow-down ms-1"></i></Button></Link>
                         </Card>
                     </Col>
                 )

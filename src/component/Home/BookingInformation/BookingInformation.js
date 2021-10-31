@@ -35,31 +35,42 @@ const BookingInformation = () => {
                 }
                 console.log(data);
             })
-
     };
     return (
         <div>
-            <h1>Provide Your Bokking Information Where You to go {id}</h1>
-            <h2>Name {customer.name}</h2>
+            <h3 className="text-primary my-2">See Details and Provide Your Booking Information</h3>
+            <hr className="mx-auto w-25 border border-1 border-primary" />
             <Card>
                 <Card.Img variant="top img-fluid" src={customer.img} />
                 <Card.Body>
                     <Card.Text>
-                        {  customer.name}
+                        <h1> {customer.name}</h1>
                     </Card.Text>
                     <Card.Text>
-                        { customer.des}
+                        <h4><i class="fas fa-map-marked-alt text-success me-2"></i>{customer.location}</h4>
+                    </Card.Text>
+                    <Card.Text>
+                    <p>Price <i class="fas fa-dollar-sign text-primary"></i>{customer.price}</p>
+                    </Card.Text>
+                    <Card.Text>
+                        <p>{customer.des}</p>
                     </Card.Text>
                 </Card.Body>
             </Card>
 
             {/* Purches Form */}
-            <h1 className="text-primary">Purches Your Odrer Where are you go</h1>
+            <h1 className="text-primary">Purches Your Odrer</h1>
             <hr className="w-25 mx-auto" />
             <form className="mb-3" onSubmit={handleSubmit(onSubmit)}>
                 <input className="mb-3 p-2 w-25 border border-info rounded-3" value={user?.displayName} placeholder="User a Name" {...register("userName")} />
                 <br />
                 <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="User an Email" value={user?.email} {...register("email")} />
+                <br />
+                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide Your Location you to go" value={customer.location}  {...register("location")} />
+                <br />
+                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide an image url"  {...register("img")} />
+                <br />
+                <input className=" mb-3 p-2 w-25 border border-info rounded-3" placeholder="Max Price" value={customer.price} {...register("price")} />
                 <br />
                 <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide Your Phone Number" {...register("phoneNumber")} />
                 <br />

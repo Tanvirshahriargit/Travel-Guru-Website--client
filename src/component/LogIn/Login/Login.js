@@ -21,7 +21,7 @@ const Login = () => {
         
     }
     return (
-        <div>
+        <div className="my-3">
             <h1>Google Log in</h1>
             <button onClick={handleGoogleSignIn} className="btn btn-primary">Log In Google</button>
         </div>

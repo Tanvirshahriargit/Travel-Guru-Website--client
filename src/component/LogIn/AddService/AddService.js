@@ -15,7 +15,7 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert("Added Service Sucessfully")
+                    alert("Added A Service Sucessfully")
                     reset()
                 }
             console.log(data);
@@ -23,17 +23,19 @@ const AddService = () => {
     };
     return (
         <div>
-            <h1>Add New Service</h1>
+            <h1 className="text-primary my-3">Add New Service</h1>
             <form className="mb-3" onSubmit={handleSubmit(onSubmit)}>
-                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide a Name" {...register("name")} />
+                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide Your Name Of City" {...register("name")} />
                 <br />
-                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide an Email" {...register("email")} />
+                <input className="mb-3 p-2 w-25 border border-info rounded-3"  placeholder="Provide a Location You Have To go"  {...register("location")} />
+                <br />
+                <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Max Price (USD)" {...register("price")} />
                 <br />
                 <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide Short Des" {...register("des")} />
                 <br />
                 <input className="mb-3 p-2 w-25 border border-info rounded-3" placeholder="Provide img url" {...register("img")} />
                 <br />
-                <input className="btn btn-primary" type="submit" />
+                <input className="btn btn-primary" value="Add Now" type="submit" />
             </form>
         </div>
     );
