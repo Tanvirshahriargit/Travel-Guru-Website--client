@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const BookingServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://haunted-eyeballs-76205.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)
