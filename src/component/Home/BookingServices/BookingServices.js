@@ -29,7 +29,7 @@ const BookingServices = () => {
                                     {service.des}
                                 </Card.Text>
                             </Card.Body>
-                            <Link to={`/booking/${service._id}`}><Button>Book Now</Button></Link>
+                            <Link to={`/booking/${service._id}`}><Button>Plan a Trip</Button></Link>
                         </Card>
                     </Col>
                 )
